@@ -40,7 +40,8 @@ body {
   color: white;
 }
 
-.range-container {
+.grid-container {
+  margin-bottom: 20px;
   display: flex;
   gap: 10px;
   flex-direction: column;

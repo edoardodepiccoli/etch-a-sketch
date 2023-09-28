@@ -7,11 +7,12 @@ let brushSize = 1;
 container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
+// grid dimensions
 const gridDimentionsSelector = document.querySelector("#grid-dimensions-range");
 const gridDimensionsText = document.querySelector(".grid-dimensions-text");
-gridDimentionsSelector.addEventListener("change", changeGridDimensionsText);
+gridDimentionsSelector.addEventListener("change", changeGridDimensions);
 
-function changeGridDimensionsText() {
+function changeGridDimensions() {
   gridDimensionsText.textContent = `Current: ${gridDimentionsSelector.value}`;
 
   clearAll();
@@ -21,6 +22,7 @@ function changeGridDimensionsText() {
   container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 }
 
+// main logic
 for (let i = 0; i < gridSize ** 2; i++) {
   let newDiv = document.createElement("div");
   newDiv.classList.add("pixel");
